@@ -1,0 +1,266 @@
+
+/* ==========================
+   MOON CAFE - MAIN STYLES
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark: #251a16;
+    --brown: #795548;
+    --cream: #f8f3eb;
+    --gold: #c49a6c;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+header {
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25, 16, 12, 0.92),
+            rgba(25, 16, 12, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+    font-size: 17px;
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTION */
+
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.section > p {
+    color: #777;
+}
+
+/* MENU */
+
+.menu-container {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.menu-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.menu-card p {
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.menu-card strong {
+    color: var(--brown);
+    font-size: 20px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #eee3d5;
+}
+
+.about p {
+    max-width: 650px;
+    margin: 20px auto 0;
+    font-size: 17px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--cream);
+}
+
+.contact p {
+    margin: 12px 0;
+}
+
+.contact .btn {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    color: #ddd;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    .navbar ul {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 55px 7%;
+        background-position: center;
+    }
+
+    .hero-content > p:not(.subtitle) {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section h2 {
+        font-size: 29px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+  }
